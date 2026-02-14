@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abhishek Thapliyal | Cloud DevOps / SRE / Platform Engineer</title>
+  <meta name="description" content="Cloud DevOps / SRE / Platform Engineer (Azure, AKS, Terraform, CI/CD). Helping startups and teams ship faster, safer, and cheaper." />
+  <style>
+    :root{
+      --bg:#0b1020;
+      --panel:#0f1733;
+      --panel2:#101a3b;
+      --text:#eaf0ff;
+      --muted:#a8b3d6;
+      --line:rgba(255,255,255,.10);
+      --brand:#7c9cff;
+      --brand2:#67e8f9;
+      --shadow: 0 20px 50px rgba(0,0,0,.35);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      background: radial-gradient(1200px 700px at 20% -10%, rgba(124,156,255,.35), transparent 60%),
+                  radial-gradient(900px 600px at 90% 10%, rgba(103,232,249,.25), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit}
+    .wrap{max-width:1100px; margin:0 auto; padding:28px 18px 70px;}
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px; padding:14px 16px; border:1px solid var(--line);
+      border-radius:999px; background: rgba(15,23,51,.55); backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
+      position:sticky; top:12px; z-index:10;
+    }
+    .logo{
+      display:flex; align-items:center; gap:10px; font-weight:700;
+      letter-spacing:.2px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius:999px;
+      background: linear-gradient(90deg, var(--brand), var(--brand2));
+      box-shadow: 0 0 24px rgba(124,156,255,.8);
+    }
+    .nav a{ text-decoration:none; color:var(--muted); font-weight:600; font-size:14px; }
+    .nav a:hover{ color:var(--text); }
+    .links{display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:flex-end}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:10px 14px; border-radius:999px; border:1px solid var(--line);
+      background: rgba(16,26,59,.6); color:var(--text);
+      text-decoration:none; font-weight:700; font-size:14px;
+    }
+    .btn:hover{ border-color:rgba(124,156,255,.55); }
+    .btn.primary{
+      background: linear-gradient(90deg, rgba(124,156,255,.95), rgba(103,232,249,.85));
+      color:#0b1020; border:none;
+    }
+    .hero{
+      display:grid; grid-template-columns: 1.2fr .8fr; gap:18px; margin-top:22px;
+      align-items:stretch;
+    }
+    @media (max-width: 880px){ .hero{grid-template-columns:1fr;} .nav{position:relative; top:auto;} }
+    .card{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background: rgba(15,23,51,.55);
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
+      padding:18px;
+    }
+    .hero h1{margin:0 0 10px; font-size:40px; line-height:1.08; letter-spacing:-.6px;}
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:7px 10px; border-radius:999px; border:1px solid var(--line);
+      background: rgba(16,26,59,.55); color:var(--muted);
+      font-weight:700; font-size:13px;
+    }
+    .sub{color:var(--muted); margin:0 0 14px; font-size:16px}
+    .kpis{display:grid; grid-template-columns: repeat(3,1fr); gap:10px; margin-top:14px}
+    @media (max-width: 520px){ .kpis{grid-template-columns:1fr;} }
+    .kpi{
+      padding:12px; border-radius:14px; border:1px solid var(--line);
+      background: rgba(16,26,59,.55);
+    }
+    .kpi b{display:block; font-size:20px}
+    .kpi span{color:var(--muted); font-weight:600; font-size:13px}
+    .stack{
+      display:flex; flex-wrap:wrap; gap:8px; margin-top:10px;
+    }
+    .pill{
+      display:inline-flex; align-items:center;
+      padding:7px 10px; border-radius:999px;
+      background: rgba(16,26,59,.55);
+      border:1px solid var(--line);
+      color:var(--muted);
+      font-weight:700; font-size:13px;
+    }
+    .grid{display:grid; grid-template-columns: repeat(3,1fr); gap:12px; margin-top:14px}
+    @media (max-width: 900px){ .grid{grid-template-columns:1fr;} }
+    h2{margin:0 0 10px; font-size:22px}
+    p{margin:0 0 10px}
+    .muted{color:var(--muted)}
+    .list{margin:10px 0 0; padding-left:18px; color:var(--muted)}
+    .list li{margin:6px 0}
+    .section{margin-top:16px}
+    .two{display:grid; grid-template-columns: 1fr 1fr; gap:12px}
+    @media (max-width: 900px){ .two{grid-template-columns:1fr;} }
+    .certs{display:flex; flex-wrap:wrap; gap:10px; margin-top:10px}
+    .cert{
+      display:flex; align-items:center; gap:10px;
+      padding:10px 12px; border-radius:14px;
+      border:1px solid var(--line); background: rgba(16,26,59,.55);
+      min-width:260px;
+    }
+    .cert img{width:34px; height:34px; border-radius:10px; object-fit:cover; border:1px solid var(--line)}
+    .cert b{display:block; font-size:14px}
+    .cert span{display:block; color:var(--muted); font-size:12px; font-weight:700}
+    .footer{margin-top:18px; text-align:center; color:var(--muted); font-size:13px}
+    .small{font-size:13px; color:var(--muted)}
+    .anchor{color:transparent; position:relative; top:-90px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="nav">
+      <div class="logo"><span class="dot"></span> Abhishek Thapliyal</div>
+      <div class="links">
+        <a href="#services">Services</a>
+        <a href="#proof">Proof</a>
+        <a href="#skills">Skills</a>
+        <a href="#certs">Certs</a>
+        <a href="#projects">Projects</a>
+        <a class="btn" href="assets/resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+        <a class="btn primary" href="mailto:abhishek.thapliyal28@gmail.com?subject=DevOps%20Project%20Inquiry">Hire Me</a>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="card">
+        <div class="badge">Cloud DevOps • SRE • Platform Engineering</div>
+        <h1>Build reliable platforms. Ship faster. Reduce cloud spend.</h1>
+        <p class="sub">
+          I’m a DevOps professional with 7+ years of experience building CI/CD, Kubernetes platforms, and cloud automation.
+          Focus: Azure/AKS, Terraform, GitHub Actions/Jenkins, observability, and production reliability.
+        </p>
+
+        <div class="stack">
+          <span class="pill">Azure</span>
+          <span class="pill">AKS / Kubernetes</span>
+          <span class="pill">Terraform</span>
+          <span class="pill">Helm</span>
+          <span class="pill">GitHub Actions</span>
+          <span class="pill">Jenkins</span>
+          <span class="pill">ArgoCD</span>
+          <span class="pill">Spinnaker</span>
+          <span class="pill">Prometheus/Grafana</span>
+          <span class="pill">ELK</span>
+        </div>
+
+        <div class="kpis">
+          <div class="kpi"><b>~95%</b><span>deployment success rate improved</span></div>
+          <div class="kpi"><b>AKS + IaC</b><span>Terraform/Helm automation</span></div>
+          <div class="kpi"><b>On-call</b><span>prod incident response</span></div>
+        </div>
+
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
+          <a class="btn primary" href="mailto:abhishek.thapliyal28@gmail.com?subject=DevOps%20Audit%20Request">Book a DevOps Audit</a>
+          <a class="btn" href="https://www.linkedin.com/in/abhishek-thapliyal" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/thapliyal28" target="_blank" rel="noopener">GitHub</a>
+        </div>
+
+        <p class="small" style="margin-top:10px;">
+          Based in Ontario • Available for weekend projects • Remote-friendly
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Quick Offer</h2>
+        <p class="muted">
+          If you’re a startup or team struggling with deployments, costs, or reliability—start with a fast audit.
+        </p>
+        <ul class="list">
+          <li>CI/CD review (GitHub Actions/Jenkins) + best practices</li>
+          <li>AKS / Kubernetes health + security guardrails</li>
+          <li>Terraform review (modules, state, drift, policies)</li>
+          <li>Observability & alerting: Prometheus/Grafana/ELK</li>
+          <li>Action plan + quick wins delivered in 3–5 days</li>
+        </ul>
+        <div style="margin-top:12px;">
+          <a class="btn primary" href="mailto:abhishek.thapliyal28@gmail.com?subject=DevOps%20Audit%20-%20Start">Start Here</a>
+          <a class="btn" href="assets/resume.pdf" target="_blank" rel="noopener">View Resume</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="services" class="anchor">.</div>
+    <div class="section card">
+      <h2>Services</h2>
+      <div class="grid">
+        <div class="card" style="background:rgba(16,26,59,.45)">
+          <h3 style="margin:0 0 6px">DevOps / Cloud Audit</h3>
+          <p class="muted">Get a clear report of what’s broken, risky, or expensive—plus a fix plan.</p>
+          <ul class="list">
+            <li>Pipeline reliability + speed</li>
+            <li>Security gaps + secrets handling</li>
+            <li>Cloud cost + resource hygiene</li>
+          </ul>
+        </div>
+
+        <div class="card" style="background:rgba(16,26,59,.45)">
+          <h3 style="margin:0 0 6px">CI/CD Implementation</h3>
+          <p class="muted">Production-grade pipelines with approvals, environments, and automated checks.</p>
+          <ul class="list">
+            <li>GitHub Actions / Jenkins</li>
+            <li>Artifact + image build/scanning</li>
+            <li>Release automation</li>
+          </ul>
+        </div>
+
+        <div class="card" style="background:rgba(16,26,59,.45)">
+          <h3 style="margin:0 0 6px">AKS / Platform Reliability</h3>
+          <p class="muted">Stabilize Kubernetes, reduce toil, and improve availability.</p>
+          <ul class="list">
+            <li>Ingress/TLS, autoscaling, PDBs</li>
+            <li>Observability + SLO thinking</li>
+            <li>On-call hardening</li>
+          </ul>
+        </div>
+      </div>
+      <p class="small">Want a fixed-price package? Email me with your stack + current pain.</p>
+    </div>
+
+    <div id="proof" class="anchor">.</div>
+    <div class="section two">
+      <div class="card">
+        <h2>Experience Snapshot</h2>
+        <p class="muted">
+          Intermediate DevOps Engineer at PointClickCare (2021–present) focused on CI/CD, AKS, Terraform/Helm,
+          monitoring, and production support. Previously Deployment/Support Engineer III at Vital Images.
+        </p>
+        <ul class="list">
+          <li>Automated CI/CD with Jenkins, GitHub Actions, ArgoCD, Spinnaker</li>
+          <li>Managed Kubernetes microservices + cloud migrations</li>
+          <li>Built dashboards/alerts (Grafana/ELK/Prometheus)</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Featured Proof</h2>
+        <ul class="list">
+          <li>Bitbucket → GitHub EMU migration + GitHub Actions automation</li>
+          <li>AWS/on-prem → Azure migration (AKS) for cost/performance</li>
+          <li>AKS + NGINX ingress + TLS using Terraform + Helm (sample repo)</li>
+        </ul>
+        <div style="margin-top:12px;">
+          <a class="btn" href="https://github.com/thapliyal28/terraform-aks-helm-nginx" target="_blank" rel="noopener">AKS/Terraform Sample Repo</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="skills" class="anchor">.</div>
+    <div class="section card">
+      <h2>Core Skills</h2>
+      <p class="muted">
+        Azure + AWS, Kubernetes (AKS/EKS), Docker, Terraform/Ansible/Helm, CI/CD (Jenkins, GitHub Actions, ArgoCD, Spinnaker),
+        monitoring (Prometheus/Grafana/ELK), and scripting (Python/Bash/Groovy/PowerShell).
+      </p>
+    </div>
+
+    <div id="certs" class="anchor">.</div>
+    <div class="section card">
+      <h2>Certifications</h2>
+      <div class="certs">
+        <div class="cert">
+          <img src="assets/certs/azure-admin.png" alt="Azure Admin" />
+          <div>
+            <b>Microsoft Certified: Azure Administrator Associate</b>
+            <span>Credential ID: 5BE986C8ECD56DB3</span>
+          </div>
+        </div>
+
+        <div class="cert">
+          <img src="assets/certs/terraform-associate.png" alt="Terraform Associate" />
+          <div>
+            <b>HashiCorp Certified: Terraform Associate</b>
+            <span>HCTAO-003</span>
+          </div>
+        </div>
+
+        <div class="cert">
+          <img src="assets/certs/azure-ai.png" alt="Azure AI Fundamentals" />
+          <div>
+            <b>Microsoft Certified: Azure AI Fundamentals</b>
+            <span>Credential ID: 89B848B1ECE943B7</span>
+          </div>
+        </div>
+
+        <div class="cert">
+          <img src="assets/certs/ccna.png" alt="CCNA" />
+          <div>
+            <b>Cisco Certified Network Associate (CCNA R&S)</b>
+            <span>Cisco ID: CSCO13312187</span>
+          </div>
+        </div>
+      </div>
+      <p class="small">Upload your badge images into <code>assets/certs/</code> with the same names, or rename the file paths above.</p>
+    </div>
+
+    <div id="projects" class="anchor">.</div>
+    <div class="section card">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div class="card" style="background:rgba(16,26,59,.45)">
+          <h3 style="margin:0 0 6px">AKS + NGINX Ingress + TLS (Terraform + Helm)</h3>
+          <p class="muted">Sample infrastructure + deployment patterns for ingress and SSL termination.</p>
+          <a class="btn" href="https://github.com/thapliyal28/terraform-aks-helm-nginx" target="_blank" rel="noopener">View Repo</a>
+        </div>
+
+        <div class="card" style="background:rgba(16,26,59,.45)">
+          <h3 style="margin:0 0 6px">Bitbucket → GitHub Migration Automation</h3>
+          <p class="muted">Repo migrations and CI workflows like ticket validation, PR notifications, secret detection.</p>
+        </div>
+
+        <div class="card" style="background:rgba(16,26,59,.45)">
+          <h3 style="margin:0 0 6px">Cloud Migration (AWS/on-prem → Azure)</h3>
+          <p class="muted">Containerized deployments on AKS with infrastructure-as-code and monitoring.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>Contact: <a href="mailto:abhishek.thapliyal28@gmail.com">abhishek.thapliyal28@gmail.com</a> • +1 (226) 899-2283</div>
+      <div class="small">© <span id="y"></span> Abhishek Thapliyal • Cloud DevOps / SRE / Platform</div>
+    </div>
+
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
