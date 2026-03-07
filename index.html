@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Abhishek Thapliyal | Cloud DevOps / SRE / Platform Engineer</title>
-  <meta name="description" content="Cloud DevOps / SRE / Platform Engineer (Azure, AKS, Terraform, CI/CD). Helping startups and teams ship faster, safer, and cheaper." />
+  <meta name="description" content="DevOps/SRE & Platform Engineer with 7+ years of experience building scalable CI/CD platforms, Kubernetes infrastructure, and cloud automation. Passionate about reliability engineering, observability, and integrating AI-driven automation into modern DevOps workflows." />
   <style>
     :root{
       --bg:#0b1020;
@@ -81,7 +81,8 @@
       font-weight:700; font-size:13px;
     }
     .sub{color:var(--muted); margin:0 0 14px; font-size:16px}
-    .kpis{display:grid; grid-template-columns: repeat(3,1fr); gap:10px; margin-top:14px}
+    .kpis{display:grid; grid-template-columns: repeat(4,1fr); gap:10px; margin-top:14px}
+    @media (max-width: 720px){ .kpis{grid-template-columns: repeat(2,1fr);} }
     @media (max-width: 520px){ .kpis{grid-template-columns:1fr;} }
     .kpi{
       padding:12px; border-radius:14px; border:1px solid var(--line);
@@ -136,8 +137,8 @@
         <a href="#skills">Skills</a>
         <a href="#certs">Certs</a>
         <a href="#projects">Projects</a>
-        <a class="btn" href="assets/resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
-        <a class="btn primary" href="mailto:abhishek.thapliyal28@gmail.com?subject=DevOps%20Project%20Inquiry">Hire Me</a>
+        <a class="btn" href="assets/abhishek_devops.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+        <a class="btn primary" href="mailto:abhishek.thapliyal28@gmail.com?subject=[WEBSITE%20INQUIRY]%20DevOps%20Project%20Inquiry">Hire Me</a>
       </div>
     </div>
 
@@ -146,14 +147,15 @@
         <div class="badge">Cloud DevOps • SRE • Platform Engineering</div>
         <h1>Build reliable platforms. Ship faster. Reduce cloud spend.</h1>
         <p class="sub">
-          I’m a DevOps professional with 7+ years of experience building CI/CD, Kubernetes platforms, and cloud automation.
-          Focus: Azure/AKS, Terraform, GitHub Actions/Jenkins, observability, and production reliability.
+          DevOps/SRE & Platform Engineer with 7+ years of experience building scalable CI/CD platforms, Kubernetes infrastructure, and cloud automation. Passionate about reliability engineering, observability, and integrating AI-driven automation into modern DevOps workflows.
         </p>
 
         <div class="stack">
           <span class="pill">Azure</span>
+          <span class="pill">AWS</span>
           <span class="pill">AKS / Kubernetes</span>
           <span class="pill">Terraform</span>
+          <span class="pill">Ansible</span>
           <span class="pill">Helm</span>
           <span class="pill">GitHub Actions</span>
           <span class="pill">Jenkins</span>
@@ -161,17 +163,19 @@
           <span class="pill">Spinnaker</span>
           <span class="pill">Prometheus/Grafana</span>
           <span class="pill">ELK</span>
+          <span class="pill">AI Integration</span>
         </div>
 
         <div class="kpis">
-          <div class="kpi"><b>~95%</b><span>deployment success rate improved</span></div>
-          <div class="kpi"><b>AKS + IaC</b><span>Terraform/Helm automation</span></div>
-          <div class="kpi"><b>On-call</b><span>prod incident response</span></div>
+          <div class="kpi"><b>CI/CD</b><span>Implementation & automation</span></div>
+          <div class="kpi"><b>Kubernetes + IaC</b><span>Terraform/Helm automation</span></div>
+          <div class="kpi"><b>Cloud Migration</b><span>on-prem/AWS to Azure</span></div>
+          <div class="kpi"><b>Monitoring</b><span>Continuous observability</span></div>
         </div>
 
         <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
-          <a class="btn primary" href="mailto:abhishek.thapliyal28@gmail.com?subject=DevOps%20Audit%20Request">Book a DevOps Audit</a>
-          <a class="btn" href="https://www.linkedin.com/in/abhishek-thapliyal" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn primary" href="mailto:abhishek.thapliyal28@gmail.com?subject=[WEBSITE%20AUDIT]%20DevOps%20Audit%20Request">Book a DevOps Audit</a>
+          <a class="btn" href="https://www.linkedin.com/in/abhishek-thapliyal/" target="_blank" rel="noopener">LinkedIn</a>
           <a class="btn" href="https://github.com/thapliyal28" target="_blank" rel="noopener">GitHub</a>
         </div>
 
@@ -193,8 +197,8 @@
           <li>Action plan + quick wins delivered in 3–5 days</li>
         </ul>
         <div style="margin-top:12px;">
-          <a class="btn primary" href="mailto:abhishek.thapliyal28@gmail.com?subject=DevOps%20Audit%20-%20Start">Start Here</a>
-          <a class="btn" href="assets/resume.pdf" target="_blank" rel="noopener">View Resume</a>
+          <a class="btn primary" href="mailto:abhishek.thapliyal28@gmail.com?subject=[WEBSITE%20AUDIT]%20DevOps%20Audit%20-%20Start">Start Here</a>
+          <a class="btn" href="assets/abhishek_devops.pdf" target="_blank" rel="noopener">View Resume</a>
         </div>
       </div>
     </div>
@@ -240,15 +244,26 @@
     <div class="section two">
       <div class="card">
         <h2>Experience Snapshot</h2>
-        <p class="muted">
-          Intermediate DevOps Engineer at PointClickCare (2021–present) focused on CI/CD, AKS, Terraform/Helm,
-          monitoring, and production support. Previously Deployment/Support Engineer III at Vital Images.
-        </p>
-        <ul class="list">
-          <li>Automated CI/CD with Jenkins, GitHub Actions, ArgoCD, Spinnaker</li>
-          <li>Managed Kubernetes microservices + cloud migrations</li>
-          <li>Built dashboards/alerts (Grafana/ELK/Prometheus)</li>
-        </ul>
+        
+        <div style="margin-bottom:16px;">
+          <b style="color:var(--text)">Intermediate DevOps Engineer</b>
+          <div class="small" style="margin-top:2px;">PointClickCare</div>
+          <ul class="list" style="margin-top:6px;">
+            <li>Automated CI/CD pipelines with Jenkins, GitHub Actions, ArgoCD, Spinnaker</li>
+            <li>Managed AKS/Kubernetes infrastructure using Terraform and Helm</li>
+            <li>Built observability dashboards and alerts (Prometheus/Grafana/ELK)</li>
+            <li>Led cloud migrations and production incident response</li>
+          </ul>
+        </div>
+
+        <div>
+          <b style="color:var(--text)">Deployment/Support Engineer III</b>
+          <div class="small" style="margin-top:2px;">Vital Images</div>
+          <ul class="list" style="margin-top:6px;">
+            <li>Managed deployment processes and production support</li>
+            <li>Automated infrastructure tasks and monitoring solutions</li>
+          </ul>
+        </div>
       </div>
 
       <div class="card">
